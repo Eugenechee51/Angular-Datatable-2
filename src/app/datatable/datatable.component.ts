@@ -100,11 +100,29 @@ export class DataTableComponent implements OnDestroy, OnInit, AfterViewInit {
       }
     });
     this.customDtOptions.dataTableOptions.columns.push({ title: 'Actions', data: null });
+    const language = {
+      "processing": "Подождите...",
+        "search": "Поиск:",
+        "lengthMenu": "Показать _MENU_ записей",
+        "info": "Записи с _START_ до _END_ из _TOTAL_ записей",
+        "infoEmpty": "Записи с 0 до 0 из 0 записей",
+        "infoFiltered": "(отфильтровано из _MAX_ записей)",
+        "loadingRecords": "Загрузка записей...",
+        "zeroRecords": "Записи отсутствуют.",
+        "emptyTable": "В таблице отсутствуют данные",
+        "paginate": {
+          "first": "Первая",
+          "previous": "Предыдущая",
+          "next": "Следующая",
+          "last": "Последняя"
+        }
+        };
     this.dtOptions = {
       dom: 'lfr<"toolbar">tip',
-      lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, 'All']],
+      lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, 'Все']],
       responsive: true,
       autoWidth: true,
+      language: language,
       initComplete: () => {
         console.log("InitComplete");
         $('div.toolbar').html(`<button type="button" id="addRecordBtn" class="btn btn-primary float-right px-2 py-1  mr-3" >Добавить новый продукт</button>`);
