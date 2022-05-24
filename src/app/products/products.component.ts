@@ -22,19 +22,19 @@ export class ProductsComponent implements OnInit {
       generateParamOnAdd:true,
       dataTableOptions: {
         columns: [
-          { title: "id", data: "id"},
-          { title: "Name", data: "name", format: "text"},
-          { title: "coord_x", data: "coordinates.0.x"},
-          { title: "coord_y", data: "coordinates.0.y" },
-          { title: "creationDate", data: "creationDate"},
-          { title: "price", data: "price", format: "text" },
-          { title: "manufactureCost", data: "manufactureCost"},
-          { title: "unitOfMeasure", data: "unitOfMeasure", format: "text"},
-          { title: "m_id", data: "manufacturer.0.id" },
-          { title: "m_name", data: "manufacturer.0.name" },
-          { title: "m_fullName", data: "manufacturer.0.fullName"},
-          { title: "m_employeesCount", data: "manufacturer.0.employeesCount"},
-          { title: "m_type", data: "manufacturer.0.type"}
+          { title: "ИД", data: "id"},
+          { title: "Название", data: "name", format: "text"},
+          { title: "Коорд. х", data: "coordinates.0.x"},
+          { title: "Коорд. у", data: "coordinates.0.y" },
+          { title: "Дата создания", data: "creationDate"},
+          { title: "Цена", data: "price", format: "text" },
+          { title: "Стоимость", data: "manufactureCost"},
+          { title: "Ед. измерения", data: "unitOfMeasure", format: "text"},
+          { title: "Производ. ИД", data: "manufacturer.0.id" },
+          { title: "Имя производ.", data: "manufacturer.0.name" },
+          { title: "Полное имя производ.", data: "manufacturer.0.fullName"},
+          { title: "Число сотрудников", data: "manufacturer.0.employeesCount"},
+          { title: "Тип компании", data: "manufacturer.0.type"}
         ]
       },
       eventCallbacks: {
